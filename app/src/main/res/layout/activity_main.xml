@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroung"
+    tools:context=".MainActivity">
+
+
+
+
+
+
+
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/sldr"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        app:sliderIndicatorAnimationDuration="600"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="#5A5A5A"
+        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderScrollTimeInSec="2"
+        app:sliderStartAutoCycle="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_conversion_absoluteHeight="36dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_conversion_absoluteWidth="139dp" />
+
+
+    </com.smarteist.autoimageslider.SliderView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="147dp"
+        android:layout_height="31dp"
+        android:text="Album"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sldr" />
+
+    <TextView
+        android:id="@+id/see1"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:text="see more"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sldr" />
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="410dp"
+        android:layout_height="157dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="154dp"
+                android:layout_height="159dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/img3" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="145dp"
+                android:layout_height="157dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img1" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="145dp"
+                android:layout_height="157dp"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageButton2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/img1" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="144dp"
+                android:layout_height="157dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageButton1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/img1" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="144dp"
+                android:layout_height="157dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageButton4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/img1" />
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="149dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="4dp"
+        android:text="Singles"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <TextView
+        android:id="@+id/see2"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:text="see more"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="145dp"
+                android:layout_height="157dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img4" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="145dp"
+                android:layout_height="157dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton7"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img4" />
+
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="145dp"
+                android:layout_height="157dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img4" />
+
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="145dp"
+                android:layout_height="157dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton9"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img4" />
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="145dp"
+                android:layout_height="157dp"
+                android:layout_marginStart="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageButton10"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="149dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="4dp"
+        android:text="Instrumental"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
+
+
+    <TextView
+        android:id="@+id/see3"
+        android:layout_width="87dp"
+        android:layout_height="27dp"
+        android:text="see more"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="145dp"
+        android:layout_height="157dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@drawable/img3" />
+
+    <TextView
+        android:id="@+id/mb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/imageButton12"
+        android:text="Morning Blues"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <HorizontalScrollView
+        android:id="@+id/hl1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/mb"
+        tools:layout_editor_absoluteX="65dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:text="A"
+
+                android:textSize="10dp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_shape"
+                tools:layout_conversion_absoluteHeight="80dp"
+                tools:layout_conversion_absoluteWidth="80dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="591dp"
+                />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:text="
+अ"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="80dp"
+                tools:layout_conversion_absoluteWidth="80dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="671dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:text="
+அ"
+                android:textSize="10dp"
+                android:textStyle="normal"
+                tools:layout_conversion_absoluteHeight="80dp"
+                tools:layout_conversion_absoluteWidth="80dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="671dp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:text="
+ਏ"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="80dp"
+                tools:layout_conversion_absoluteWidth="80dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="671dp" />
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:text="
+
+ಎ"
+                android:textSize="10dp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="80dp"
+                tools:layout_conversion_absoluteWidth="80dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="671dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+<TextView
+    android:id="@+id/gn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/hl1"
+    android:text="Generes"
+    android:textSize="20dp"
+    android:textStyle="bold"
+    android:textColor="@color/white"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/gn">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/imageButton15"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Blues"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+
+            <Button
+                android:id="@+id/imageButton16"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Jazz"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton17"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Rock"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton18"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Classical"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton19"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Western Classical"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton20"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="RNB"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton21"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Hip-hop"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton22"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Folk"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton23"
+                android:layout_width="120dp"
+                android:text="Fusion"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton24"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="pop"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton25"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:text="Dubstep"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton26"
+                android:layout_width="120dp"
+                android:text="Soundtrack"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+            <Button
+                android:id="@+id/imageButton27"
+                android:layout_width="120dp"
+                android:text="RAP"
+                android:background="#CFCCCC"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_dark_frame" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
